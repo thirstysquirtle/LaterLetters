@@ -1,0 +1,13 @@
+.openapi-generator-ignore
+apis/AuthApi.ts
+apis/LettersApi.ts
+apis/index.ts
+index.ts
+models/ArrayOfLettersInner.ts
+models/CreateLetterRequest.ts
+models/CreateLetterRequestTagListValue.ts
+models/LoginUserRequest.ts
+models/RequestPasswordResetRequest.ts
+models/ResetPasswordRequest.ts
+models/index.ts
+runtime.ts

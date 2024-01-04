@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer {
     :root {
-        --color-themeBG: 247 245 237;
-        --color-themeAccent: 230 218 187;
-        --color-txtPrim: 181 76 11;
-        --color-txtSec: 253 250 250;
+        --color-themeBG: 43 41 40;
+        --color-themeAccent: 163 153 131;
+        --color-txtPrim: 235 235 226;
+        --color-txtSec: 235 235 226;
     }
 }
+/*
+# 163 153 131
+# 43 41 40
+# 235 235 226
+*/
