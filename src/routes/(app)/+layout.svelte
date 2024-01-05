@@ -22,8 +22,9 @@
         console.log(PUBLIC_API_ENDPOINT);
     });
 </script>
-
-<slot></slot>
+<main class="grow flex items-center md:m-3 flex-col">
+    <slot />
+</main>
 
 
 <footer class="md:mx-3 mt-2 md:rounded-md md:border-black md:border-2 bg-themeAccent text-txtSec sticky bottom-0 flex justify-evenly">

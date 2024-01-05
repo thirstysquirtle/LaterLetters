@@ -103,7 +103,7 @@ export class LettersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/letters/{letter_id}`.replace(`{${"letter_id"}}`, encodeURIComponent(String(requestParameters.letterId))),
+            path: `/api/letter/{letter_id}`.replace(`{${"letter_id"}}`, encodeURIComponent(String(requestParameters.letterId))),
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,

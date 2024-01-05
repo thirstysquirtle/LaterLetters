@@ -4,7 +4,7 @@
 </script>
 
 
-<div class="w-[min(500px,100%)] p-2 sm:p-0 flex flex-col gap-4 mt-28">
+<div class="w-[min(500px,100%)] p-2 sm:p-0 flex flex-col gap-4 mt-[clamp(0.5rem,4vw,8rem)]">
     <h1 class="text-3xl">Receive a Link to Reset your Password</h1>
     <form on:submit|preventDefault class="flex flex-col text-2xl gap-4 justify-center">
         <input required placeholder="Email" class="w-full rounded-sm p-1 text-black" id="email" name="email" type="text" bind:value={email} />
@@ -17,3 +17,11 @@
         <h2>Do you not have an Account? <a class="font-bold" href="/register">Click Here to Register</a></h2>
     </div>
 </div>
+
+<style>
+        a {
+    font-weight: 700;
+    white-space: nowrap;
+    color: rgb(159, 194, 237);
+}
+</style>
