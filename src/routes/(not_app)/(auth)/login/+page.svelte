@@ -1,7 +1,6 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
     import ErrorBox from "$lib/components/ErrorBox.svelte";
-    import { error } from "@sveltejs/kit";
 
     let showPassword = false;
 
@@ -53,7 +52,7 @@
     <hr>
     <h2 class="text-lg w-full text-center">Or</h2>
     <hr>
-    <button class="text-2xl rounded-sm text-txtSec bg-themeAccent hover:outline p-2" type="submit">Use Test Account</button>
+    <button class="text-2xl rounded-sm text-txtSec bg-themeAccent hover:outline p-2" type="submit">Use Anonymous Account</button>
 
     <div class="text-left text-xl">
         <h2>Need to Create an Account? <a href="/register">Click Here to Register</a></h2>

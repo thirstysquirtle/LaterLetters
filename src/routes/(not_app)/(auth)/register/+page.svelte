@@ -75,7 +75,7 @@
         {:else if error_code === 500}
             <ErrorBox heading={"Error"} body={"Either this email already exists, or our server is having issues."} />
         {/if}
-        <div class="text-[1rem] flex items-center gap-1">
+        <div class="text-[1rem] pr-1 flex items-center gap-1">
             <label for="acceptTerms">By creating an account, you agree to our <a href="/terms">Terms</a></label>
             <input required type="checkbox" name="acceptTerms" id="acceptTerms" />
         </div>

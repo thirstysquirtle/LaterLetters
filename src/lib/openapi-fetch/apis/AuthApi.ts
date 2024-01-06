@@ -54,6 +54,29 @@ export interface UserLogoutRequest {
 export class AuthApi extends runtime.BaseAPI {
 
     /**
+     */
+    async createAnonAccountRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>> {
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        const response = await this.request({
+            path: `/user/anon-account`,
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.VoidApiResponse(response);
+    }
+
+    /**
+     */
+    async createAnonAccount(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void> {
+        await this.createAnonAccountRaw(initOverrides);
+    }
+
+    /**
      * Allows user to login
      */
     async loginUserRaw(requestParameters: LoginUserOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>> {

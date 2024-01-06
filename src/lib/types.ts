@@ -1,5 +1,5 @@
 export enum Tabs {
     Write = "Write",
-    Swipe = "Swipe",
+    Swipe = "Read",
     Tags = "Tags",
 }
