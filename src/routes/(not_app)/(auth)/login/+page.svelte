@@ -17,6 +17,15 @@
             error_code = error.response.status;
         }
     }
+
+    async function getAnonAccount() {
+        try {
+            await data.auth_api.createAnonAccount();
+            await goto("/write");
+        } catch (error) {
+            error_code = error.response.status;
+        }
+    }
 </script>
 
 <div class="w-[min(500px,100%)] p-2 sm:p-0 flex flex-col gap-4 mt-[clamp(0.5rem,4vw,8rem)]">
@@ -49,10 +58,10 @@
         {/if}
         <button class="rounded-sm text-txtSec bg-themeAccent hover:outline p-2" type="submit">Login</button>
     </form>
-    <hr>
+    <hr />
     <h2 class="text-lg w-full text-center">Or</h2>
-    <hr>
-    <button class="text-2xl rounded-sm text-txtSec bg-themeAccent hover:outline p-2" type="submit">Use Anonymous Account</button>
+    <hr />
+    <button on:click={getAnonAccount} class="text-2xl rounded-sm text-txtSec bg-themeAccent hover:outline p-2">Use Anonymous Account</button>
 
     <div class="text-left text-xl">
         <h2>Need to Create an Account? <a href="/register">Click Here to Register</a></h2>

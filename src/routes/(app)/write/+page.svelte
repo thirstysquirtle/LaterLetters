@@ -8,16 +8,21 @@
     let tagName: string = "";
     let tagColor = "#86b8df";
     function addTag() {
-        const tagId = tagName + tagColor;
-        tagsList[tagId] = { name: tagName, color: tagColor };
-        // if (tagsList.filter((tag) => tag.id == tagId).length === 0) {
-        // tagsList = [...tagsList, { id: tagId, name: tagName, color: tagColor }];
-        // }
+        if (tagName != "" && tagColor != "") {
+            const tagId = tagName + tagColor;
+            tagsList[tagId] = { name: tagName, color: tagColor };
+        }
     }
     let letterBody: HTMLTextAreaElement;
     let loading = false;
     async function saveLetter() {
         console.log("wut");
+        console.log(letterBody.value);
+        try {
+            await data.letters_api.createLetter({ createLetterRequest: { body: letterBody.value, tagList: tagsList } });
+        } catch (error) {
+            console.log(error);
+        }
         // loading = true;
         // const letter: Letter = {
         //     dateCreated: new Date(),
@@ -37,9 +42,9 @@
 <form
     id="addLetter"
     on:submit|preventDefault={saveLetter}
-    class="{loading ? 'pointer-events-none' : ''} flex flex-col justify-start bg-themeAccent p-3 rounded-lg text-txtPrim gap-3 w-full h-[85%] md:h-full border-2 border-black"
+    class="{loading ? 'pointer-events-none' : ''} flex flex-col justify-start bg-themeAccent p-3 rounded-lg text-txtPrim gap-3 w-full h-[100%] md:h-full border-2 border-black"
 >
-    <h1 class="font-bold">Create LaterLetter</h1>
+    <h1 class="font-bold">Create Letter</h1>
     <textarea
         bind:this={letterBody}
         placeholder="Write here..."

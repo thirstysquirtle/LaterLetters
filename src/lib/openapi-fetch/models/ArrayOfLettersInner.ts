@@ -37,13 +37,13 @@ export interface ArrayOfLettersInner {
      * @type {Array<string>}
      * @memberof ArrayOfLettersInner
      */
-    tagIds?: Array<string>;
+    tagIds: Array<string>;
     /**
      * 
      * @type {{ [key: string]: CreateLetterRequestTagListValue; }}
      * @memberof ArrayOfLettersInner
      */
-    tagList?: { [key: string]: CreateLetterRequestTagListValue; };
+    tagList: { [key: string]: CreateLetterRequestTagListValue; };
 }
 
 /**

@@ -27,7 +27,7 @@
 </main>
 
 
-<footer class="md:mx-3 sm:mt-2 md:rounded-md md:border-black md:border-2 bg-themeAccent text-txtSec sticky bottom-0 flex justify-evenly items-center h-[max(10vh,2.5rem)]">
+<footer class="md:mx-3 mt-1 rounded-md sm:mt-2 md:border-black md:border-2 bg-themeAccent text-txtSec sticky bottom-0 flex justify-evenly items-center h-[max(10vh,2.5rem)]">
     {#each footerIconNames as name}
         {@const active = activeTab === name}
         <a on:click={() => {activeTab = name}} href="/{name.toLowerCase()}">
@@ -41,6 +41,7 @@
             </div>
         </a>
     {/each}
+
 </footer>
 
 <style>

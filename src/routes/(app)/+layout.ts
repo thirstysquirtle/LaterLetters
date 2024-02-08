@@ -5,9 +5,9 @@ import { goto } from "$app/navigation";
 
 export function load() {
     const username = getUsernameCookie();
-    // if (username === undefined) {
-    //     goto("/login")
-    // }
+    if (username === undefined) {
+        goto("/login")
+    }
     function getApiKey(name: string): string {
         const lookupTable: { [key: string]: string } = {
             'X-User-Email': username!
