@@ -1,11 +1,11 @@
 <!-- Credits to Scott Galloway: https://codepen.io/scottloway/pen/zqoLyQ -->
 
 <script>
-    export let loading = false;
+    export let spinnerIsSpinning = false;
 </script>
 
-<div class="circle-loader {loading ? '' : 'load-complete'}">
-    <div class="draw {loading ? '':'checkmark'}" />
+<div class="circle-loader {spinnerIsSpinning ? '' : 'load-complete'}">
+    <div class="draw {spinnerIsSpinning ? '':'checkmark'}" />
 </div>
 
 <style>

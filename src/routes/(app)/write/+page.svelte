@@ -15,14 +15,28 @@
     }
     let letterBody: HTMLTextAreaElement;
     let loading = false;
+    let spinnerIsSpinning = true;
     async function saveLetter() {
         console.log("wut");
         console.log(letterBody.value);
         try {
+            loading = true;
+            spinnerIsSpinning = true;
             await data.letters_api.createLetter({ createLetterRequest: { body: letterBody.value, tagList: tagsList } });
+
+            setTimeout(() => {
+                letterBody.value = "";
+                tagName = "";
+                spinnerIsSpinning = false;
+                
+            }, 500);
+            setTimeout(() => {
+                    loading = false;
+                }, 950);
         } catch (error) {
             console.log(error);
         }
+
         // loading = true;
         // const letter: Letter = {
         //     dateCreated: new Date(),
@@ -34,15 +48,12 @@
     }
 </script>
 
-{#if loading}
-    <div class="fixed grid place-items-center inset-0 top-0 h-full bg-black bg-opacity-5">
-        <LoadingCheckmark {loading} />
-    </div>
-{/if}
 <form
     id="addLetter"
     on:submit|preventDefault={saveLetter}
-    class="{loading ? 'pointer-events-none' : ''} flex flex-col justify-start bg-themeAccent p-3 rounded-lg text-txtPrim gap-3 w-full h-[100%] md:h-full border-2 border-black"
+    class="{loading
+        ? 'pointer-events-none'
+        : ''} relative flex flex-col justify-start bg-themeAccent p-3 rounded-lg text-txtPrim gap-3 w-full h-[100%] md:h-full border-2 border-black"
 >
     <h1 class="font-bold">Create Letter</h1>
     <textarea
@@ -79,6 +90,12 @@
 
     <button form="addLetter" class="rounded-sm bg-themeBG p-2 font-semibold" type="submit">Save Letter</button>
     <!-- </div> -->
+
+    {#if loading}
+        <aside class="absolute grid place-items-center inset-0 top-0 h-full bg-black bg-opacity-15">
+            <LoadingCheckmark {spinnerIsSpinning} />
+        </aside>
+    {/if}
 </form>
 
 <style>

@@ -1,4 +1,6 @@
 <script>
+    import ErrorBox from "$lib/components/ErrorBox.svelte";
+
     let showPassword = false;
     let showConfirm = false;
 
@@ -7,9 +9,7 @@
     let email = "";
     const uuid = new URLSearchParams(window.location.search).get("uuid");
 
-    function handleForm() {
-        
-    }
+    function handleForm() {}
 </script>
 
 {#if uuid == null}
@@ -58,8 +58,9 @@
                     <img class="hidden peer-checked:block" src="/hide-pass.png" alt="hide password button" />
                 </label>
             </div>
-            
+
             <button class="rounded-sm text-txtSec bg-themeAccent hover:outline p-2" type="submit">Reset</button>
         </form>
+        <ErrorBox heading={"Most Likely Doesn't Work"} body={"There was a time where it worked, but probably not anymore by the time that you are reading this."}></ErrorBox>
     </div>
 {/if}

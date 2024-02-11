@@ -15,9 +15,9 @@
 </script>
 
 <h1 style="border-color: {tag_color};" class="border-4 border-solid font-bold text-lg bg-themeAccent px-4 py-1 m-2 rounded-md" >{tag_name}</h1>
-<ul>
+<ul class="flex flex-col gap-2 text-2xl">
     {#each letters as letter}
-        <li>
+        <li class="border border-dashed p-2 border-white">
             <button>
                 {letter.body}
             </button>
