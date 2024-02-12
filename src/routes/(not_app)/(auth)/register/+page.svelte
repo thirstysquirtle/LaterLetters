@@ -84,7 +84,7 @@
     <div class="text-left text-lg">
         <h2>Already have an account? <a href="/login">Click Here to Login</a></h2>
     </div>
-    <ErrorBox heading={"Usernames"} body={"If you use an email instead of a username, you won't be able to reset your password. Usernames are recommended as they are better for your privacy."} />
+    <ErrorBox heading={"Usernames"} body={"If you use a username instead of an email, you won't be able to reset your password. However, usernames are recommended as they are better for your privacy."} />
 </div>
 
 <style>

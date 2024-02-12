@@ -3,7 +3,7 @@
     import ErrorBox from "$lib/components/ErrorBox.svelte";
 </script>
 
-<main class="grow flex items-center md:m-3 flex-col">
+<main class="grow flex flex-col justify-center items-center md:m-3">
     <slot />
 </main>
 
