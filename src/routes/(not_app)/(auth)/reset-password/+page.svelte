@@ -13,12 +13,12 @@
 </script>
 
 {#if uuid == null}
-    <div class="w-[min(500px,100%)] p-2 sm:p-0 flex flex-col items-center mt-[clamp(0.5rem,5vw,12rem)] text-center">
+    <div class="w-[min(500px,100%)] p-2 sm:p-0 flex flex-col items-center text-center">
         <h1 class="text-3xl">The link is broken</h1>
         <h2><a href="/forgot-password"><span class="font-bold">Click Here</span> to receive another Link</a></h2>
     </div>
 {:else}
-    <div class="w-[min(500px,100%)] p-2 sm:p-0 flex flex-col gap-4 mt-[clamp(0.5rem,5vw,12rem)]">
+    <div class="w-[min(500px,100%)] p-2 sm:p-0 flex flex-col gap-4">
         <h1 class="text-3xl">Reset your Password</h1>
         <form on:submit|preventDefault class="flex flex-col text-2xl gap-4 justify-center">
             <input required placeholder="Email" class="w-full rounded-sm p-1 text-black" id="email" name="email" type="text" bind:value={email} />

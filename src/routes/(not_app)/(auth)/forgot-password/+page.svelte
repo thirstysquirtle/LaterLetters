@@ -3,7 +3,7 @@
     import ErrorBox from "$lib/components/ErrorBox.svelte";
 </script>
 
-<div class="w-[min(500px,100%)] p-2 sm:p-0 flex flex-col gap-4 mt-[clamp(0.5rem,4vw,8rem)]">
+<div class="w-[min(500px,100%)] p-2 sm:p-0 flex flex-col gap-4">
     <h1 class="text-3xl">Receive a Link to Reset your Password</h1>
     <form on:submit|preventDefault class="flex flex-col text-2xl gap-4 justify-center">
         <input required placeholder="Email" class="w-full rounded-sm p-1 text-black" id="email" name="email" type="text" bind:value={email} />
