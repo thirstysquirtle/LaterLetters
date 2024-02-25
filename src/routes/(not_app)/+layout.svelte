@@ -15,9 +15,9 @@
         <div>Terms of Service</div>
     </a>
     <div>
-        <a target="_blank" href="https://github.com/thirstysquirtle/latterletter-backend">
+        <a target="_blank" href="https://github.com/thirstysquirtle/LaterLettesr-BothEnds">
             <ErrorBox body={"Not a Serious App"}></ErrorBox>
         </a>
     </div>
-    <a target="_blank" href="https://github.com/thirstysquirtle"><h2>Github</h2></a>
+    <a target="_blank" href="https://github.com/thirstysquirtle/LaterLettesr-BothEnds"><h2>Github</h2></a>
 </footer>
